@@ -15,14 +15,23 @@ Getting up and running with Karma and Angular 1.* on Windows
 ### Install
 
 ##### Install npm packages
-- run install_test_packages.bat, this will install various packages under your devDependencies
+- Run `install_test_packages.bat`, this will install various packages under your devDependencies
 
 ##### Modify karma.conf.js
-- in the karma conf, add any libraries you need like angular, jquery, etc. Any thing that is used by your application. You can start with simply adding angular, running tests and then adding dependencies as you go.
+- In the `karma.conf.js` file, add any libraries you need like angular, jquery, etc. Any thing that is used by your application. You can start with simply adding angular, running tests and then adding dependencies as you go.
 
 ##### Run karma
-- "scripts" section to your packages.json if you don't have it already, this allows you to run "npm test"
-- OR run karma.bat
+- Run karma.bat
+- OR in the "scripts" section to your `packages.json` add:
+`
+"scripts":{
+  "test" : "node node_modules/karma/bin/karma start --log-level debug"
+}
+`
+- Now run "npm test"
 
 
 #### Potential Issues
+- no package.json: if you don't have package.json because you're just trying this out make sure you run "npm init" first.
+- Cannot set property 'mock' of undefined: Make sure your karma.conf.js files list includes the angular library
+
