@@ -1,5 +1,5 @@
 beforeEach(function() {
-  // Create a new sandbox before each test
+  // Create a new sinon sandbox before each test
   this.sandbox = sinon.sandbox.create();
 });
 
