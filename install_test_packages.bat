@@ -1,0 +1,1 @@
+npm install --save-dev chai chai-as-promised karma karma-chrome-launcher sinon angular-mocks karma-chai karma-chai-plugins karma-mocha karma-ng-html2js-preprocessor mocha q karma-sinon
